@@ -9,9 +9,9 @@
 	<session-factory>
 
 
-		<!-- <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> -->
+		<!--<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>-->
 
-		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		 <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property> 
 
 		<property name="hibernate.connection.url">jdbc:mysql://localhost/curso</property>
 
@@ -22,10 +22,11 @@
 		<property name="connection.pool_size">1</property>
 
 		<!-- Select our SQL dialect -->
+		
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property> 
 
-		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-
-		<!-- Echo the SQL to stdout -->
+		<!-- <property name="hibernate.dialect"> org.hibernate.dialect.PostgreSQL94Dialect</property>
+		Echo the SQL to stdout -->
 
 		<property name="show_sql">true</property>
 
@@ -49,10 +50,10 @@
 
 		<property name="hibernate.dbcp.maxWaitMillis">-1</property>
 
-		<!--<mapping class="ejercicio.entities.Empleado" />
-		<mapping class="ejercicio.entities.Departamento" />
-		<mapping resource="Empleado.hbm.xml" />
-		<mapping resource="Departamento.hbm.xml" />-->
+		<mapping class="entities.Empleado" />
+		<mapping class="entities.Departamento" />
+		<!--<mapping resource="Empleado.hbm.xml" /> <mapping resource="Departamento.hbm.xml" 
+			/> -->
 
 
 	</session-factory>
